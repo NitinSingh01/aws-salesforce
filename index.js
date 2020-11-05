@@ -10,7 +10,6 @@ var conn = new jsforce.Connection({
 // http://aws.amazon.com/asl/
  mode: 'single'
 });
-exports.handler = function(event, context, callback) {
 console.log("Hello");
 var conn = new jsforce.Connection({});
 conn.login(USERNAME, PASSWORD, function(err, userInfo) {
@@ -21,4 +20,3 @@ conn.login(USERNAME, PASSWORD, function(err, userInfo) {
     console.dir(message);
   });
 });
-};
