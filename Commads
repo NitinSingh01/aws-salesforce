@@ -2,12 +2,17 @@ Install Nodejs :
 sudo -s
 apt-get update
 apt-get install -yq ca-certificates git build-essential supervisor
-
-# Install nodejs
 mkdir /opt/nodejs
 curl https://nodejs.org/dist/v8.12.0/node-v8.12.0-linux-x64.tar.gz | tar xvzf - -C /opt/nodejs --strip-components=1
 ln -s /opt/nodejs/bin/node /usr/bin/node
 ln -s /opt/nodejs/bin/npm /usr/bin/npm
+
+Changes required in index.js file:
+Add User Data for authentication and authorization 
+UserName: salesforce Username
+Password: Password + Security Key
+Consumer key: Connected Applicaiton Consumer key
+Consumer Secret: Connected Applicaiton Consumer Secret
 
 To Run code:
 node index.js
